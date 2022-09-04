@@ -6,7 +6,7 @@ const app = express();
 // res=>request, res => responds
 app.get('/', (req, res) => {
     // send json data
-    res.send({ hi : 'there' });
+    res.send({ hi : 'there, byebye' });
 });
 
 // telling node js to listen to port 8000
