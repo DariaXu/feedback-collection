@@ -5,7 +5,6 @@ import * as actions from '../actions';
 
 class Stripe extends Component {
     render() {
-
         return (
             <StripeCheckout
                 name="Emaily"
