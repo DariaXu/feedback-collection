@@ -11,13 +11,18 @@ module.exports = app => {
     );
 
     // give google the return code and get the profile
-    app.get('/auth/google/callback', passport.authenticate('google'));
+    app.get('/auth/google/callback', passport.authenticate('google'), 
+        (req, res) => {
+            res.redirect('/surveys');
+        }
+    );
 
     // logout
     app.get('/api/logout', (req, res) => {
         req.logout();
         // should be no content
-        res.send(req.user);
+        // res.send(req.user);
+        res.redirect('/');
     });
 
     // get current login user
