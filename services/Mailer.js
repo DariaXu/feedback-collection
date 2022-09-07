@@ -10,7 +10,7 @@ class Mailer extends helper.Mail {
 
         this.sgApi = sendgrid(keys.sendGridKey);
         // need to fix
-        this.from_email = new helper.Email('sender@emaily.com');
+        this.from_email = new helper.Email('dariaxu@dariaxu.com');
         this.subject = subject;
         this.body = new helper.Content('text/html', content);
         this.recipients = this.formartAddresses(recipients);
@@ -53,4 +53,4 @@ class Mailer extends helper.Mail {
     }
 }
 
-model.exports = Mailer;
+module.exports = Mailer;
