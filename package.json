@@ -1,7 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "engines": {
     "node": "18.8.0",
@@ -20,12 +19,24 @@
     "body-parser": "^1.20.0",
     "concurrently": "^7.3.0",
     "cookie-session": "^2.0.0",
+    "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "mongoose": "^6.5.4",
     "nodemon": "^2.0.19",
     "passport": "^0.5.3",
     "passport-google-oauth20": "^2.0.0",
     "sendgrid": "^5.2.3",
+    "sib-api-v3-sdk": "^8.4.2",
     "stripe": "^10.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DariaXu/feedback-collection.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/DariaXu/feedback-collection/issues"
+  },
+  "homepage": "https://github.com/DariaXu/feedback-collection#readme",
+  "description": ""
 }
