@@ -13,6 +13,7 @@ import 'materialize-css/dist/css/materialize.min.css'
 import axios from 'axios';
 window.axios = axios;
 
+// reducer will return the the state object
 const store = createStore(reducers, {}, applyMiddleware(reducersThunk));
 // ReactDOM.render(<Provider store={store}><App /></Provider>, document.querySelector('#root'));
 

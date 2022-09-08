@@ -13,7 +13,7 @@ class Stripe extends Component {
                 token={token => this.props.handleToken(token)}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
             >
-                <button className="btn">
+                <button className="waves-effect waves-light btn yellow darken-3">
                     Add Credits
                 </button>
             </StripeCheckout>
@@ -21,4 +21,5 @@ class Stripe extends Component {
     }
 }
 
+// the actions which is map dispatch to props, enable the function call 'this.props.handleToken(token)'
 export default connect(null, actions) (Stripe);

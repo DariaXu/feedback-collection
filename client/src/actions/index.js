@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_USER } from './types';
+import { FETCH_USER, FETCH_SURVEYS } from './types';
 
 // action creater 
 // if return a function, reducersThunk will call the return fuction 
@@ -9,6 +9,13 @@ export const fetchUser = () => async dispatch => {
     // action as parameter, res.data is the user model object
     // if the user model changed, anything depends on this user model will be updated
     dispatch({type: FETCH_USER, payload: res.data});
+};
+
+export const fetchSurveys = () => async dispatch => {
+    const res = await axios.get('/api/surveys');
+    // action as parameter, res.data is the user model object
+    // if the user model changed, anything depends on this user model will be updated
+    dispatch({type: FETCH_SURVEYS, payload: res.data});
 };
 
 export const handleToken = (token) => async dispatch => {

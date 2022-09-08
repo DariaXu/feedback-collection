@@ -10,6 +10,12 @@ const surveyTemplate = require('../services/emailTemplates/surveyTemplate')
 const Survey = mongoose.model('surveys');
 
 module.exports = app => {
+    app.get('/api/surveys', requireLogin, async (req, res) =>{
+        const surveys = await Survey.find({_user: req.user.id}).select( {recipients: false});
+
+        res.send(surveys);
+    });
+
     // recipient will be direct to this url after click
     app.get('/api/surveys/:surveyId/:choice', (req, res) =>{
         res.send("Thank you for your feedback!");
@@ -38,7 +44,7 @@ module.exports = app => {
                 }, {
                     $inc: {[choice] : 1 }, // increment the choice ('yes' or 'no') to 1
                     $set: { 'recipients.$.responded': true }, // $match with the $elemMatch
-                    lastResponded: new Date()
+                    lastResponded: Date.now(),
                 }).exec();
             })
             .value();     

@@ -19,14 +19,14 @@ const SurveyFormReview = ({ onReview, formValues, sendSurvey, history }) => {
         <div>
           <h5>SurveyFormReview</h5>
           {reviewFields}
-          <button className="red btn-flat white-text" onClick={onReview}>
+          <button className="deep-orange darken-4 btn-flat white-text" onClick={onReview} style={{ margin: '20px 0' }}>
             <i className='material-icons left'>arrow_back</i>
             Back 
           </button>
-          <button 
+          <button style={{ margin: '20px 0' }}
             onClick={() => sendSurvey(formValues, history)}
             className="green btn-flat white-text right">
-            <i className='material-icons right'>email</i>
+            <i className='material-icons right'>send</i>
             Send Survey 
           </button>
         </div>
