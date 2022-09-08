@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Stripe from "./Stripe";
 
+// re-render comp when the return stateProps changes
 class Header extends Component {
     renderContent() {
         switch(this.props.auth) {
@@ -33,8 +34,7 @@ class Header extends Component {
 }
 
 // gets called with the entire state object any time the Redux store state is updated.
-// if return a function, the function will be treat as real mapStateToProps
-// re-render comp when the return stateProps changes({ auth })
+// get the state from redux store and map tp props
 function mapStateToProps({ auth }){
     // return { auth: state.auth};
     // return { auth: auth};

@@ -20,7 +20,8 @@ class App extends Component {
       // jss
       <div className="container">
         <BrowserRouter>
-          <div>
+          {/* adding the "container" class will enable some margin*/}
+          <div className='container'>
             <Header />
             <Route exact path="/" component={Landing} />
             <Route exact path="/surveys" component={Dashboard} />
