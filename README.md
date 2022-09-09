@@ -9,7 +9,7 @@ A website application for collecting feedback by sending customized survey email
 - [x] Create email tempelate and review before send
 
 ## ▶️ App
-`https://evening-sea-03256.herokuapp.com/`
+[https://evening-sea-03256.herokuapp.com](https://evening-sea-03256.herokuapp.com/)
 
 ## 📦 Packages Used
 ### Frontend
